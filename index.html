@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Emil Karutchi</title>
+    <meta name="description" content="Denne webdokumentar er Emils personlige
+    fortælling omkring hans ophold på Eriksminde Efterskole i Odder. Emil
+    fortæller om fællesskabet, hvilke valgfag han har valgt og hvorfor
+    Eriksminde Efterskole er et godt valg.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section>
+    <div class="img-container">
+      <div class="inner-container">
+        <h1>ERIKSMINDE EFTERSKOLE</h1>
+        <h2>EMIL</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- OM EMIL -->
+  <div class="overskrift-fortaelling">
+      <h2> ELEKTRONISK MUSIK <br>
+      <span style="font-size:59px;">BONDERØVEN</span><br>
+      <span style="font-size:44px;">MALING</span><br>
+      <span style="font-size:34px;">TYSK</span><br>
+      <span style="font-size:49px;">MATEMATIK</span>
+      </h2>
+      <p>
+        Emil er 15 år og kommer fra en mindre by lidt udenfor Aarhus.
+        Her skete der ikke de store aktiviteter<br> og som den lidt mere introverte
+        person, var det svært at komme ud af den boks, der var dannet i det
+        miljø.<br> I sin fritid interesserede han sig for elektronisk musik. Dog
+        havde Emil ikke den store motivation til at gå<br> videre med det derhjemme
+        og havde brug for at komme hen et sted, hvor man havde muligheden for
+        at<br> dyrke den interesse og samtidig få nye oplevelser og venskaber.
+        Anderledes hverdag med en bred vifte af<br> kreative fag, som man kan
+        afprøve og fordybe sig i.
+      </p>
+  </div>
+
+    <!-- VIDEO -->
+<main>
+  <section id="video">
+    <video width="100%" height="200" loop controls>
+      <source src="images/Emil-video.mp4" type="video/mp4">
+  </section>
+</main>
+
+
+  <!-- VALGFAG/FAG/IMAGE SLIDESHOW -->
+<section class="billeder">
+  <div class="room-description">
+  <h1> VALGFAG & VÆRKSTEDER</h1>
+    <h2>FOTO - ANALOG</h2>
+    <p>Fotografi handler om idéudvikling og skabe sit eget perosnlige udtryk.<br>
+    Vi arbejder med analog kamera og i mørkekammer.</p>
+    <h2>MALERI</h2>
+    <p>Vi arbejder meget med form, flader, farver og kompositioner. </p>
+    <h2>TRÆ</h2>
+    <p>I træværkstedet kan du samle, konstruere eller designe dine helt egne
+      projekter.<br> Lær omkring de forskellige byggematerialer samt
+      håndværksmæssige teknikker.</p>
+    <h2>ELEKTRONISK MUSIK</h2>
+    <p>Uanset om du er til House, Dubstep eller Techno vil du få mulighed for
+      at<br> dygtiggøre dig, både teknisk og kunstnerisk.
+  </p>
+  </div>
+
+  <div class="slidercontainer">
+          <div class="showSlide fade">
+              <img src="images/maleri.jpg" width="663px" height="994px" />
+          </div>
+          <div class="showSlide fade">
+              <img src="images/foto.jpg"/>
+          </div>
+
+          <div class="showSlide fade">
+              <img src="images/maskine.jpg"/>
+          </div>
+          <div class="showSlide fade">
+              <img src="images/foto1.jpg"/>
+          </div>
+          <div class="showSlide fade">
+              <img src="images/træ.jpg"/>
+          </div>
+          <div class="showSlide fade">
+              <img src="images/musik.jpg"/>
+          </div>
+
+    <!-- Navigation arrows -->
+          <a class="left" onclick="nextSlide(-1)">❮</a>
+          <a class="right" onclick="nextSlide(1)">❯</a>
+      </div>
+</section>
+
+
+    <!-- Instagram -->
+    <section class="instagram">
+    <img src="images/instagram.jpg">
+    </section>
+
+    <div class="grid-container">
+    <div class="row">
+      <div class="column">
+        <a href="https://www.instagram.com/p/B2gSvzrh_sH/"><img src="images/emil-closeup.jpg"></a>
+        <a href="https://www.instagram.com/p/B2gSxxNBoZ0/"><img src="images/maleri.jpg"></a>
+        <a href="https://www.instagram.com/p/B2gcVzFhZyN/"><img src="images/elektronisk.jpg"></a>
+
+      </div>
+      <div class="column">
+        <a href="https://www.instagram.com/p/B2gcfMBBiqH/"><img src="images/bordfodbold.jpg"></a>
+        <a href="https://www.instagram.com/p/B2gcjiKBBW9/"><img src="images/skate.jpg"></a>
+        <a href="https://www.instagram.com/p/B2gcl3CBYMu/"><img src="images/basket.jpg"></a>
+
+      </div>
+      <div class="column">
+        <a href="https://www.instagram.com/p/B2gdbWOBBGc/"><img src="images/citat.jpg"></a>
+        <a href="https://www.instagram.com/p/B2gd5wIhu-y/"><img src="images/emma.jpg"></a>
+        <a href="https://www.instagram.com/p/B2geY0EhxVS/"><img src="images/studie.jpg"></a>
+      </div>
+    </div>
+    </div>
+
+      <!-- JAVASCRIPT -->
+
+<script type="text/javascript">
+        var slide_index = 1;
+        displaySlides(slide_index);
+        function nextSlide(n) {
+            displaySlides(slide_index += n);
+        }
+        function currentSlide(n) {
+            displaySlides(slide_index = n);
+        }
+        function displaySlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("showSlide");
+            if (n > slides.length) { slide_index = 1 }
+            if (n < 1) { slide_index = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide_index - 1].style.display = "block";
+        }
+
+        $(window).scroll(function() {
+    $('video').each(function(){
+        if ($(this).is(":in-viewport")) {
+            $(this);
+        } else {
+            $(this)[0].pause();
+        }
+    })
+});
+</script>
+
+</html>
